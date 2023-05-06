@@ -1,0 +1,152 @@
+@import 'config';
+@import 'utilities';
+
+*
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body
+{
+    font-family: 'Libre Franklin';
+    font-size: 20px;
+    color: $very-dark-blue;
+}
+
+a
+{
+    text-decoration: none;
+    color: $blue;
+}
+
+input[type=text].failed
+{
+    border-color: $light-red;
+}
+
+.validation-error
+{
+    padding: 8px 25px;
+    color: $light-red;
+    font-style: italic;
+    font-size: 0.6rem;
+    margin: 0 5px;
+    width: 370px;  
+    position: absolute;
+    display: none;
+}
+
+header
+{
+    margin-top: 70px;
+
+    .title
+    {
+        margin: 40px 0 20px 0;
+        text-align: center;
+
+        span
+        {
+            color: $gray;
+            font-weight: 300;
+        }
+    }
+    .lead
+    {
+        text-align: center;
+        font-size: 0.8rem;
+    }
+}
+
+main
+{
+    margin-top: 30px;
+
+    form
+    {
+        margin-bottom: 70px;
+
+        input
+        {
+            outline: none;
+            border-radius: 30px;
+            padding: 15px 25px;
+            font-family: 'Libre Franklin';
+            margin: 0 5px;
+        }
+
+        input[type=text]
+        {
+            width: 370px;
+            border: 1.5px solid  rgba($gray, 0.5);         
+        }
+
+        input[type=text]::placeholder
+        {
+            color: $gray;
+        }
+
+        input[type=submit]
+        {
+            border:none;
+            background-color: $blue;
+            font-weight: 600;
+            color: #fff;
+            width: 160px;
+            box-shadow: 0 5px 5px rgba($gray, 0.3);
+            transition: background-color 0.5s;
+        }
+
+        input[type=submit]:hover
+        {
+            background-color: lighten($blue, 10%);
+            cursor: pointer;
+        }
+    }
+
+    img
+    {
+        width: 570px;
+    }
+}
+
+.main-footer
+{
+    margin: 50px 0;
+
+    .socials
+    {
+        justify-content: space-between;
+        align-items: center;
+        width: 120px;
+
+        .btn
+        {    
+            font-size: 0.7rem;    
+            border-radius: 50%;
+            border: 1px solid $pale-blue;        
+            padding: 15px;
+            width: 10px;
+            height: 10px;
+            transition: 0.5s;
+        }
+
+        .btn:hover
+        {
+            background-color: $blue;
+            color: #fff;
+        }
+    }
+
+    .lead
+    {
+        margin-top: 20px;
+        font-size: 0.7rem;
+        color: $gray;
+        text-align: center
+    }
+}
+
+@import 'mobile';
